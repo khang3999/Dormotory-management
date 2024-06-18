@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý sinh viên</title>
+    <link rel="stylesheet" href="style-admin.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- nền -->
+      <div class="header-banner">
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-2">
+            <div class="logo"></div>
+          </div>
+          <div class="col-8">
+            <div class="title">Trang Quản Lí Ký Túc Xá TDC</div>
+            <div class="row">
+              <div class="col diachi">
+                53 Võ Văn Ngân, Linh Chiểu, Tp Thủ Đức, Tp Hồ Chí Minh
+              </div>
+              <div class="col sdt">0283 8966 825 - 028 3897 0023</div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+        </div>
+      </div>
+      <!-- thanh tác vụ -->
+    </header>
+    <div class="navbar row">
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="addmin-btn">Quản lý sinh viên</button>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="addmin-btn">Quản lý phòng</button>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="addmin-btn">Quản lý bài viết</button>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="addmin-btn">Thống kê</button>
+      </div>
+      <div class="col d-flex justify-content-center">
+        <button type="button" class="addmin-btn">Cài đặt chung</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- thanh navbar bên trái -->
+      <div class="col-1 navbarTrai">
+        <div class="typeOfStudentManagerment btnDonXin">
+          <a href="#donXinVao"><i class="bi bi-person-plus-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment btnSinhVien">
+          <a href="#sinhVien"><i class="bi bi-people-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment btnDonXinRut">
+          <a href="#donXinRa"><i class="bi bi-person-dash-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment quanLyThongBao">
+          <a href="#quanLy"><i class="bi bi-asterisk"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment btnGhiChu">
+          <a href="#ghichu"><i class="bi bi-card-checklist"></i></a>
+        </div>
+      </div>
+      <!-- khung làm việc -->
+      <div class="col-11 khungLamViec">
+        <div class="bang" id="donXinVao">
+          <div class="tableName">Đơn xin vào kí túc xá</div>
+          <div class="row py-2">
+            <div class="col-8">
+              <div class="checkbox-group">
+                <label for="checkbox1">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox1"
+                    name="options"
+                    value="Option 1"
+                  />
+                  Giới tính nam
+                </label>
+                <label for="checkbox2">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Giới tính nữ
+                </label>
+                <label for="checkbox3">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Trường hợp ưu tiên
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-mdb-ripple-init
+                >
+                  search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive bang-noi-dung">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-12">ID</th>
+                  <th scope="col" class="text-12">Tên</th>
+                  <th scope="col" class="text-12">MSSV</th>
+                  <th scope="col" class="text-12">Email</th>
+                  <th scope="col" class="text-12">Giới tính</th>
+                  <th scope="col" class="text-12">Phone</th>
+                  <th scope="col" class="text-12">CCCD</th>
+                  <th scope="col" class="text-12">Ngày Sinh</th>
+                  <th scope="col" class="text-12">Quê Quán</th>
+                  <th scope="col" class="text-12">Dân Tộc</th>
+                  <th scope="col" class="text-12">Ghi Chú</th>
+                  <th scope="col" class="text-12">Thời Gian</th>
+                  <th scope="col" class="text-12">Công Cụ</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                  <td class="text-10">1</td>
+                  <td class="text-10">Nguyen Van Du</td>
+                  <td class="text-10">22211TT1357</td>
+                  <td class="text-10">vandupluss@gmail.com</td>
+                  <td class="text-10">nam</td>
+                  <td class="text-10">1234567890</td>
+                  <td class="text-10">111111111111</td>
+                  <td class="text-10">28/01/2004</td>
+                  <td class="text-10">An Giang</td>
+                  <td class="text-10">Kinh</td>
+                  <td class="text-10 text-limit">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores ipsam deserunt harum incidunt, officiis quo eaque
+                    qui! Nemo unde ducimus reiciendis, quisquam beatae odit,
+                    totam accusamus enim ipsa suscipit error! Lcing eunt eque
+                    suscipit deserunt.
+                  </td>
+                  <td class="text-10">1 nam</td>
+                  <td class="text-15">
+                      <i class="bi bi-app"></i>
+                      <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
+                      <i class="bi bi-trash"></i>
+                    </td>
+                </tr>
+               
+               
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+              </tbody>
+            </table>
+          </div>
+
+          <div class="groupbutton">
+            <button class="btn-file">Xuất file</button>
+            <button class="btn-file">Nhập file</button>
+          </div>
+        </div>
+        <div class="bang" id="sinhVien">
+          <div class="tableName">Sinh viên trong kí túc xá</div>
+          <div class="row py-2">
+            <div class="col-8">
+              <div class="checkbox-group">
+                <label for="checkbox1">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox1"
+                    name="options"
+                    value="Option 1"
+                  />
+                  Giới tính nam
+                </label>
+                <label for="checkbox2">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Giới tính nữ
+                </label>
+                <label for="checkbox3">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Trường hợp ưu tiên
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-mdb-ripple-init
+                >
+                  search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive bang-noi-dung">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-12">ID</th>
+                  <th scope="col" class="text-12">Tên</th>
+                  <th scope="col" class="text-12">MSSV</th>
+                  <th scope="col" class="text-12">Email</th>
+                  <th scope="col" class="text-12">Giới tính</th>
+                  <th scope="col" class="text-12">Phone</th>
+                  <th scope="col" class="text-12">CCCD</th>
+                  <th scope="col" class="text-12">Ngày Sinh</th>
+                  <th scope="col" class="text-12">Quê Quán</th>
+                  <th scope="col" class="text-12">Dân Tộc</th>
+                  <th scope="col" class="text-12">Ghi Chú</th>
+                  <th scope="col" class="text-12">Thời Gian</th>
+                  <th scope="col" class="text-12">Công Cụ</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                  <td class="text-10">1</td>
+                  <td class="text-10">Nguyen Van Du</td>
+                  <td class="text-10">22211TT1357</td>
+                  <td class="text-10">vandupluss@gmail.com</td>
+                  <td class="text-10">nam</td>
+                  <td class="text-10">1234567890</td>
+                  <td class="text-10">111111111111</td>
+                  <td class="text-10">28/01/2004</td>
+                  <td class="text-10">An Giang</td>
+                  <td class="text-10">Kinh</td>
+                  <td class="text-10 text-limit">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores ipsam deserunt harum incidunt, officiis quo eaque
+                    qui! Nemo unde ducimus reiciendis, quisquam beatae odit,
+                    totam accusamus enim ipsa suscipit error! Lcing eunt eque
+                    suscipit deserunt.
+                  </td>
+                  <td class="text-10">1 nam</td>
+                  <td class="text-15">
+                      <i class="bi bi-app"></i>
+                      <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
+                      <i class="bi bi-trash"></i>
+                    </td>
+                </tr>
+               
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+              </tbody>
+            </table>
+          </div>
+          <div class="groupbutton">
+            <button class="btn-file">Xuất file</button>
+            <button class="btn-file">Nhập file</button>
+          </div>
+        </div>
+        <div class="bang" id="donXinRa">
+          <div class="tableName">Đơn xin ra khỏi kí túc xá</div>
+          <div class="row py-2">
+            <div class="col-8">
+              <div class="checkbox-group">
+                <label for="checkbox1">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox1"
+                    name="options"
+                    value="Option 1"
+                  />
+                  Giới tính nam
+                </label>
+                <label for="checkbox2">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Giới tính nữ
+                </label>
+                <label for="checkbox3">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Trường hợp ưu tiên
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-mdb-ripple-init
+                >
+                  search
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-responsive bang-noi-dung">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-12">ID</th>
+                  <th scope="col" class="text-12">Tên</th>
+                  <th scope="col" class="text-12">MSSV</th>
+                  <th scope="col" class="text-12">Email</th>
+                  <th scope="col" class="text-12">Giới tính</th>
+                  <th scope="col" class="text-12">Phone</th>
+                  <th scope="col" class="text-12">CCCD</th>
+                  <th scope="col" class="text-12">Ngày Sinh</th>
+                  <th scope="col" class="text-12">Quê Quán</th>
+                  <th scope="col" class="text-12">Dân Tộc</th>
+                  <th scope="col" class="text-12">Ghi Chú</th>
+                  <th scope="col" class="text-12">Thời Gian</th>
+                  <th scope="col" class="text-12">Công Cụ</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                  <td class="text-10">1</td>
+                  <td class="text-10">Nguyen Van Du</td>
+                  <td class="text-10">22211TT1357</td>
+                  <td class="text-10">vandupluss@gmail.com</td>
+                  <td class="text-10">nam</td>
+                  <td class="text-10">1234567890</td>
+                  <td class="text-10">111111111111</td>
+                  <td class="text-10">28/01/2004</td>
+                  <td class="text-10">An Giang</td>
+                  <td class="text-10">Kinh</td>
+                  <td class="text-10 text-limit">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores ipsam deserunt harum incidunt, officiis quo eaque
+                    qui! Nemo unde ducimus reiciendis, quisquam beatae odit,
+                    totam accusamus enim ipsa suscipit error! Lcing eunt eque
+                    suscipit deserunt.
+                  </td>
+                  <td class="text-10">1 nam</td>
+                  <td class="text-15">
+                      <i class="bi bi-app"></i>
+                      <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
+                      <i class="bi bi-trash"></i>
+                    </td>
+                </tr>
+               
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+              </tbody>
+            </table>
+          </div>
+          <div class="groupbutton">
+            <button class="btn-file">Xuất file</button>
+            <button class="btn-file">Nhập file</button>
+          </div>
+        </div>
+        <div class="bang" id="quanLy">
+          <div class="tableName">Quản lý vi phạm sinh viên</div>
+          <div class="row py-2">
+            <div class="col-8">
+              <div class="checkbox-group">
+                <label for="checkbox1">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox1"
+                    name="options"
+                    value="Option 1"
+                  />
+                  Giới tính nam
+                </label>
+                <label for="checkbox2">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Giới tính nữ
+                </label>
+                <label for="checkbox3">
+                  <input
+                    class="check"
+                    type="checkbox"
+                    id="checkbox2"
+                    name="options"
+                    value="Option 2"
+                  />
+                  Trường hợp ưu tiên
+                </label>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input
+                  type="search"
+                  class="form-control rounded"
+                  placeholder="Search"
+                  aria-label="Search"
+                  aria-describedby="search-addon"
+                />
+                <button
+                  type="button"
+                  class="btn btn-outline-primary"
+                  data-mdb-ripple-init
+                >
+                  search
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="table-responsive bang-noi-dung">
+            <table class="table table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="text-12">ID</th>
+                  <th scope="col" class="text-12">Tên</th>
+                  <th scope="col" class="text-12">MSSV</th>
+                  <th scope="col" class="text-12">Email</th>
+                  <th scope="col" class="text-12">Giới tính</th>
+                  <th scope="col" class="text-12">Phone</th>
+                  <th scope="col" class="text-12">CCCD</th>
+                  <th scope="col" class="text-12">Ngày Sinh</th>
+                  <th scope="col" class="text-12">Quê Quán</th>
+                  <th scope="col" class="text-12">Dân Tộc</th>
+                  <th scope="col" class="text-12">Ghi Chú</th>
+                  <th scope="col" class="text-12">Thời Gian</th>
+                  <th scope="col" class="text-12">Công Cụ</th>
+                </tr>
+              </thead>
+              <tbody>
+                 <tr>
+                  <td class="text-10">1</td>
+                  <td class="text-10">Nguyen Van Du</td>
+                  <td class="text-10">22211TT1357</td>
+                  <td class="text-10">vandupluss@gmail.com</td>
+                  <td class="text-10">nam</td>
+                  <td class="text-10">1234567890</td>
+                  <td class="text-10">111111111111</td>
+                  <td class="text-10">28/01/2004</td>
+                  <td class="text-10">An Giang</td>
+                  <td class="text-10">Kinh</td>
+                  <td class="text-10 text-limit">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores ipsam deserunt harum incidunt, officiis quo eaque
+                    qui! Nemo unde ducimus reiciendis, quisquam beatae odit,
+                    totam accusamus enim ipsa suscipit error! Lcing eunt eque
+                    suscipit deserunt.
+                  </td>
+                  <td class="text-10">1 nam</td>
+                  <td class="text-15">
+                      <i class="bi bi-app"></i>
+                      <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
+                      <i class="bi bi-trash"></i>
+                    </td>
+                </tr>
+               
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+
+               
+               
+              </tbody>
+            </table>
+          </div>
+          <div class="groupbutton">
+            <button class="btn-file">Xuất file</button>
+            <button class="btn-file">Nhập file</button>
+          </div>
+        </div>
+        <div class="bangGhiChu" id="ghichu">
+          <div class="tableName">Ghi Chú</div>
+          <textarea class="ghiChuCuaQuanLy" name="ghichu" id="a">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga esse quo quis aliquid dignissimos blanditiis deserunt unde earum ipsam consequuntur, nisi ab tenetur minus ullam, exercitationem officia nemo vero et?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet necessitatibus delectus reiciendis dolor ratione veniam, error deleniti aut optio recusandae expedita quia ex eius dolore at laboriosam. Possimus, odit veniam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut beatae enim laborum fugiat mollitia saepe iste incidunt possimus impedit iure. Dolores, consectetur! Temporibus saepe sint illum dolores doloribus, fuga repudiandae?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo nam ullam accusamus quidem possimus? Tenetur sed ipsum quod praesentium ipsa ratione et nisi rem odio, dolorum suscipit saepe amet vero.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus vitae quae iste laboriosam dolorem ipsam deserunt. Est omnis velit assumenda blanditiis, cupiditate vel recusandae adipisci ducimus similique officia, rem tenetur.
+            </textarea
+          >
+        </div>
+      </div>
+    </div>
+    <div class="home">
+      <a href="#">
+        <i class="bi bi-house-door-fill" style="color: white"></i>
+      </a>
+    </div>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
