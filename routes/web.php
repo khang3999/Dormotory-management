@@ -14,6 +14,9 @@ Route::get('/dashboard', function () {
 Route::get('admin/statistic', function () {
     return view('admin/statistic');
 });
+Route::get('admin/withdrawal', function () {
+    return view('form/withdrawal');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
