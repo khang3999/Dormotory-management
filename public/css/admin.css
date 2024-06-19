@@ -10,5 +10,13 @@
 .wrapper-content{
     box-shadow: 5px 0px 20px #999999;
 }
-.
+.form-withdrawal{
+    width: 900px;
+}
+.line-short{
+    width: 260px;
+}
+.bold{
+    font-style:;
+}
 /* admin-layout.css END */
