@@ -1,6 +1,6 @@
 <x-admin-layout>
     <x-slot:title>
-        Withdrawal form
+        Biểu mẫu xin ra khỏi kí túc xá
     </x-slot:title>
     <div class="d-flex mt-5">
         <form class="mx-auto form-withdrawal" action="">
@@ -9,7 +9,7 @@
             <div class="line-short mx-auto">
                 <hr>
             </div>
-            <h3 class="text-center">ĐƠN XIN RA KHỎI KÝ TÚC XÁ</h3>
+            <h3 class="text-center">ĐƠN XIN RA KHỎI KÍ TÚC XÁ</h3>
             <p>Kính gửi:<b class="bold"> Phòng Công tác Chính trị - Học sinh sinh viên</b></p>
             <div class="row g-3 align-items-center my-2">
                 <div class="col-1">
@@ -49,7 +49,7 @@
             </div>
             <div class="row g-3 align-items-center my-2">
                 <div class="col-3">
-                    <label for="room" class="col-form-label">Hiện đang lưu trú tịa phòng: </label>
+                    <label for="room" class="col-form-label">Hiện đang lưu trú tại phòng: </label>
                 </div>
                 <div class="col-9">
                     <input type="text" id="room" class="form-control" name="room">
@@ -64,7 +64,7 @@
                     <textarea id="reason" class="form-control" name="reason"></textarea>
                 </div>
             </div>
-            <p><b class="">Em cam kết</b>: Đã bàn giao tài sản KTX cho Quản lý KTX và sẽ chuyern tư trang hành lý cá nhân sau khi hoàn tất thủ tục xin ra khỏi KTX.</p>
+            <p><b class="">Em cam kết</b>: Đã bàn giao tài sản KTX cho Quản lý KTX và sẽ chuyển tư trang hành lý cá nhân sau khi hoàn tất thủ tục xin ra khỏi KTX.</p>
             <p>Kính mong Phòng Công tác Chính trị - Học sinh sinh viên chấp thuận.<br>Trân trọng cảm ơn.</p>
             <p>*Vui lòng kiểm tra toàn bộ thông tin trước khi nộp đơn.</p>
             <button class="btn btn-primary">Nộp đơn</button>
