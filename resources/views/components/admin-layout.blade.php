@@ -7,64 +7,76 @@
     <title>{{$title ?? 'TDC-Dormitory'}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style-admin.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="row g-0">
-            <div class="col-2">
-                <div class="slide-bar pt-3">
-                    <ul class="nav justify-content-center flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link text-white w-100" href="#" aria-current="page">Logo</a>
-                            <div class="text-white">
-                                <hr>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-buildings-fill"></i><span class="mx-1">Phòng</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-people-fill"></i><span class="mx-1">Sinh viên</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-postcard-fill"></i><span class="mx-1">Biểu mẫu</span><i class="bi bi-caret-right-fill"></i></a>
-                            <ul class="text-white">
-                                <li><a class="dropdown-item text-white" href="#">Đơn xin ra khỏi ký túc xá</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Another action</a></li>
-                                <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-graph-up-arrow"></i><span class="mx-1">Thống kê</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"><i class="bi bi-gear-fill"></i><span class="mx-1">Cài đặt</span></a>
-                        </li>
-                    </ul>
-
+    <header>
+        <!-- nền -->
+        <div class="header-banner container py-4">
+            <div class="row">
+                <div class="col-2">
+                    <a class="img-fluid">
+                        <div class="logo"></div>
+                    </a>
                 </div>
-            </div>
-            <div class="col-10">
-                <div class="wrapper-content py-3 d-flex justify-content-between px-4">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-
-                    <div class="profile d-flex align-items-center">
-                        <span class="mx-2">Admin</span>
-                        <a class="logout fs-4"><i class="bi bi-box-arrow-right"></i></a>
+                <div class="col-10">
+                    <h1 class="text-center title text-white">Trang Quản Lí Ký Túc Xá TDC</h1>
+                    <div class="row mt-4">
+                        <div class="diachi text-white">
+                            Địa chỉ: 53 Võ Văn Ngân, Linh Chiểu, Tp Thủ Đức, Tp Hồ Chí Minh
+                        </div>
+                        <div class="sdt text-white">Số điện thoại: 0283 8966 825 - 028 3897 0023</div>
                     </div>
                 </div>
-                {{$slot}}
-
             </div>
         </div>
+    </header>
+    <!-- thanh tác vụ -->
+    <div class="navbar row">
+        <div class="col-3 d-flex justify-content-center">
+            <a href="{{route('admin.rooms')}}" class="admin-btn"><i class="bi bi-buildings-fill me-1"></i>Quản lý phòng</a>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <a href="{{route('admin.students')}}" class="admin-btn"><i class="bi bi-people-fill me-1"></i>Quản lý sinh viên</a>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <a href="{{route('admin.posts')}}" class="admin-btn"><i class="bi bi-postcard-fill me-1"></i>Quản lý bài viết</a>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+            <a href="{{route('admin.statistic')}}" class="admin-btn"><i class="bi bi-bar-chart-line-fill me-1"></i>Thống kê</a>
+        </div>
     </div>
-    
+    <div class="row">
+      <div class="col-1 navbarTrai py-3">
+        <div class="typeOfStudentManagerment btnDonXin">
+          <a href="{{route('admin.studentIn')}}"><i class="bi bi-person-plus-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment btnDonXinRut">
+          <a href="{{route('admin.studentOut')}}"><i class="bi bi-person-dash-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment quanLyThongBao">
+          <a href="#quanLy"><i class="bi bi-bell-fill"></i></a>
+        </div>
+        <div class="typeOfStudentManagerment btnGhiChu">
+          <a href="#ghichu"><i class="bi bi-card-checklist"></i></a>
+        </div>
+      </div>
+
+      <div class="col-11 khungLamViec">
+        {{$slot}}
+      </div>
+    </div>
+
+    <div class="home">
+      <a href="#">
+        <i class="bi bi-house-door-fill" style="color: white"></i>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     {{$script ?? ''}}
