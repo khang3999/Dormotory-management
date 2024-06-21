@@ -35,8 +35,6 @@ Route::get('admin/studentOut', function () {
 Route::get('admin/studentIn', function () {
     return view('admin/student-in');
 })->name('admin.studentIn');
-
-
 //Trang login
 Route::get('/myLogin', function () {
     return view('login');

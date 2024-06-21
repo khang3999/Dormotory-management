@@ -2,7 +2,7 @@
     <x-slot:title>
         Quản lí phòng
     </x-slot:title>
-    <div class="bang" id="quanLyPhong">
+    <div class="bang bangquanlyphong " id="quanLyPhong">
         <div class="tableName">Quản lý phòng</div>
         <div class="row py-2">
             <div class="col-8">
@@ -23,186 +23,359 @@
             </div>
             <div class="col-4">
                 <div class="input-group">
-                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                        aria-describedby="search-addon" />
                     <button type="button" class="btn btn-outline-primary" data-mdb-ripple-init>search</button>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                {{-- Phòng  --}}
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
 
-        <div class="table-responsive bang-noi-dung">
-            <table class="table table-bordered">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col" class="text-12">ID</th>
-                        <th scope="col" class="text-12">Tên Phòng</th>
-                        <th scope="col" class="text-12">Giới tính</th>
-                        <th scope="col" class="text-12">Số lượng sinh viên</th>
-                        <th scope="col" class="text-12">Trạng thái</th>
-                        <th scope="col" class="text-12">Công Cụ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-12">1</td>
-                        <td class="text-12">B3001</td>
-                        <td class="text-12">Nữ</td>
-                        <td class="text-12">13/15</td>
-                        <td class="text-12">Phòng tốt</td>
-                        <td class="text-15">
-                            <i class="bi bi-app"></i>
-                            <i class="bi bi-eye" data-toggle="modal" data-target="#exampleModal"></i>
-                            <i class="bi bi-trash"></i>
-                        </td>
-                    </tr>
+                    </div>
+                </div>
+                 <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
 
-                </tbody>
-            </table>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                 <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                 <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="room">
+                        <div class="room-name">
+                            001
+                        </div>
+                        <div class="room-infor row">
+                            <div class="styleComponentOfRoom col-4 py-1">nu</div>
+                            <div class="styleComponentOfRoom col-4 py-1">13/15</div>
+                            <div class="styleComponentOfRoom col-4 py-1"> tot</div>
+                        </div>
+                        <div class="room-button row">
+                            <i class="styleComponentOfRoom col-4 bi bi-app"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-eye" data-toggle="modal"
+                                data-target="#exampleModal"></i>
+                            <i class="styleComponentOfRoom col-4 bi bi-trash"></i>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
         <div class="groupbutton">
             <button class="btn-file">Xuất file</button>
