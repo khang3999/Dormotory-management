@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/',[
+    EventController::class, 'index'
+])->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -14,7 +15,7 @@ Route::get('/dashboard', function () {
 // trang thống kê
 Route::get('admin/statistic', function () {
     return view('admin/statistic');
-})->name('admin.statistic');
+})->name('admin.statistic');    
 // Trang quản lí sinh viên
 Route::get('admin/students', function () {
     return view('admin/students');
@@ -44,10 +45,14 @@ Route::get('/myRegister', function () {
     return view('registerIn');
 })->name('myRegister');
 
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::resource("events", EventController::class);
+
 
 require __DIR__.'/auth.php';
