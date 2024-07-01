@@ -56,7 +56,7 @@
                 </div>
                 <div class="box-event-personal text-center">
                     <?php
-                    $isLogin = false; // Đổi thành true để xem layout khi có tài khoản
+                    $isLogin = true; // Đổi thành true để xem layout khi có tài khoản
                     if ($isLogin == true) {
                             ?>
                     <div class="personal">
